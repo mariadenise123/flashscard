@@ -3,31 +3,33 @@
     --card-front-color: #144480;
     --card-back-color: #00F4BF;
 }
+
 body {
-    background-color: url('img/448db9fd23bb0faeecbf4ee2d4361e0e.jpg')
+    background: url('img/448db9fd23bb0faeecbf4ee2d4361e0e.jpg;
     font-family: Bai Jamjuree;
 }
 
 #container {
-    display: flex; /* Elementos dispostos em linha */
+    display: flex; 
 }
 
 .cartao {
     margin: 1rem 1rem;
-    background-color: rgb(239, 173, 248);
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
 }
 
 .cartao__conteudo {
+    background-color: var(--card-front-color);
     text-align: center;
     /* background-color: aquamarine; */
     height: 100%;
 }
 
 .cartao__conteudo h3 {
-    background-color: rgba(238, 223, 221, 0.062);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     text-align: left;
     padding: 0.5rem;
     position: absolute;
@@ -41,14 +43,18 @@ body {
     padding: 2rem;
 }
 
+.cartao__conteudo__pergunta p {
+    color: var(--text-color);
+    font-weight: 500;
+}
 
-
-
-
-
+.cartao__conteudo__resposta p {
+    color: var(--card-back-color);
+    font-weight: 700;
+}
 
 footer {
-    background-color: rgb(236, 132, 202);
+    background-color: rgb(247, 82, 219);
     color: white;
     position: fixed;
     bottom: 0;
@@ -60,4 +66,3 @@ footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
-}
