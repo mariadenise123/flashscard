@@ -1,16 +1,20 @@
-root {
+:root {
     --text-color: #DBE4EF;
     --card-front-color: #144480;
     --card-back-color: #00F4BF;
 }
 
 body {
-    background: url('img/448db9fd23bb0faeecbf4ee2d4361e0e.jpg');
+    background: url(img/448db9fd23bb0faeecbf4ee2d4361e0e.jpg);
     font-family: Bai Jamjuree;
 }
 
 #container {
     display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 3rem;
 }
 
 .cartao {
@@ -26,7 +30,7 @@ body {
     /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 300ms;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3 {
@@ -38,11 +42,13 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
 }
 
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
+    margin-top: 4rem;
 }
 
 .cartao__conteudo__pergunta p {
@@ -59,6 +65,21 @@ body {
     transform: rotateY(180deg);
 }
 
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
+
+
+
+
 
 
 
@@ -68,7 +89,7 @@ body {
 
 
 footer {
-    background-color: rgb(185, 77, 212);
+    background-color: black;
     color: white;
     position: fixed;
     bottom: 0;
@@ -80,4 +101,9 @@ footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
-}
+
+
+
+
+
+
